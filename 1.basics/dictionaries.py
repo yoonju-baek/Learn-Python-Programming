@@ -40,3 +40,34 @@ favorite_fruits = {'father': 'apple', 'mother': 'banana', 'brother': 'kiwi', 'si
 print('Fruits list:')
 for fruit in set(favorite_fruits.values()):
     print(fruit.title())
+
+# A list in a dictionary
+bubble_tea = {
+    'tea' : 'green',
+    'sugar' : 'less',
+    'ice' : 'normal',
+    'toppings' : ['cheese cream', 'tapioca']
+}
+
+print("You ordered a " + bubble_tea['tea'] + " bubble tea with "+ bubble_tea['sugar'] + " sugar and " + bubble_tea['ice'] + " ice. The following toppings :")
+for topping in bubble_tea['toppings']:
+    print("\t" + topping)
+
+# A dictionary in a dictionary
+customers = {
+    'john' : {
+        'firstname' : 'john',
+        'lastname' : 'smith',
+        'phone' : '6472031234'
+    },
+    'jessica' : {
+        'firstname' : 'jessica',
+        'lastname' : 'lane',
+        'phone' : '6478390274'
+    }
+}
+
+for name, info in customers.items():
+    print("The information of " + name)
+    print("\tFull name: " + info['firstname'].title() + " " + info['lastname'].title())
+    print('\tphone number: ' + info['phone'])
