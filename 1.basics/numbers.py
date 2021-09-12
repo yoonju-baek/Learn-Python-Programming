@@ -1,5 +1,5 @@
 # Operator
-# add(+), subtract(-), multiply(*), divide(/)
+# add(+), subtract(-), multiply(*), divide(/), modulo(%)
 # exponents(**)
 
 # str() function - convert the non-string values into an string
