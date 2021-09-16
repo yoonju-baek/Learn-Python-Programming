@@ -7,7 +7,7 @@ def make_bubble_tea(tea, *requests):
     for request in requests:
         print(request)
 
-make_bubble_tea('milk tea', 'less sugar', 'normal ice', 'kiwi', 'tapioca')
+#make_bubble_tea('milk tea', 'less sugar', 'normal ice', 'kiwi', 'tapioca')
 
 # Arbitary keyword arguments
 def user_profile(first, last, **add_info):
@@ -23,10 +23,10 @@ def user_profile(first, last, **add_info):
     
     return profile
 
-user = user_profile('john', 'smith',
-                    city='calgary',
-                    phone='6548397263',
-                    email='john.s@gmail.com')
+#user = user_profile(
+#    'john', 'smith', 
+#    city='calgary', 
+#    email='john.s@gmail.com')
 
-print(user)
+#print(user)
 
