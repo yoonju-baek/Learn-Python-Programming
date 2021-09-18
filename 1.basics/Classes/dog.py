@@ -1,15 +1,18 @@
+from pet import Pet
+from owner import Owner
+
 # Creating a dog class - class keyword
-class Dog():
+class Dog(Pet):
     """
     A simple attempt to model a dog.
     """
 
     # self parameter is required and must come first
-    def __init__(self, name, age):
+    def __init__(self, type, name, age):
         """Initialize name and age attributes"""
-        self.name = name
-        self.age = age
+        super().__init__(type, name, age)
         self.vaccination = False # Setting a default value
+        self.owner = Owner() #Instance as attribute
 
     def sit(self):
         """Simulate a dog sitting in response to a command."""
