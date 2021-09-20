@@ -1,0 +1,3 @@
+Hello python world!
+I'm learning Python.
+Python is easy and readable.
