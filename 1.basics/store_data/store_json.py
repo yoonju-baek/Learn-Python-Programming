@@ -1,12 +1,11 @@
+import json
 # Json(JavaScript Object Notation)
 # json.dump(data, file object) - store data  
 # json.load() - read data
 
-import json
-
 def json_writer(data, filename):
-    with open(filename, 'w') as f_obj:
-        json.dump(data, f_obj)
+    with open(filename, 'w') as f_w:
+        json.dump(data, f_w)
 
 
 def json_reader(filename):
@@ -15,7 +14,7 @@ def json_reader(filename):
         print(numbers)
 
 
-filename = '1.basics/File/numbers.json'
+filename = '1.basics/store_data/numbers.json'
 numbers = [1, 2, 3, 4, 5, 6, 7]
 
 json_writer(numbers, filename)
