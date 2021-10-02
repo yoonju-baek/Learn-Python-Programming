@@ -2,6 +2,7 @@ from pet import Pet
 from owner import Owner
 
 # Creating a dog class - class keyword
+# Dog class (child) inherits from Pet class (parent)
 class Dog(Pet):
     """
     A simple attempt to model a dog.
