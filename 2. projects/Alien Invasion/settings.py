@@ -17,3 +17,8 @@ class Settings():
         self.bullet_height = 5 #pixels
         self.bullet_color = 60, 60, 60 # dark gray bullets
         self.bullets_allowed = 5 # the number of bullets at a time
+
+        # Alien seetings
+        self.alien_speed_factor = 1
+        self.fleet_drop_speed = 5 # how quickly the fleet drops down the screen each time
+        self.fleet_direction = 1 # fleet_direction of 1 represents right; -1 represents left.
