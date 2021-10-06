@@ -45,7 +45,7 @@ def check_events(ai_settings, screen, ship, bullets):
             check_keyup_events(event, ship)
 
 
-def update_screen(ai_settings, screen, ship, aliens, bullets):
+def update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button):
     """Update images on the screen and flip to the new screen"""
     # Redraw the screen during each pass through the loop.
     screen.fill(ai_settings.bg_color)
@@ -57,6 +57,10 @@ def update_screen(ai_settings, screen, ship, aliens, bullets):
     ship.blitme()
     aliens.draw(screen) # Group.draw() -Pygame automatically draws each element in the group at the position defined by its rect attribute.
 
+    # Draw the play button if the game is inactive
+    if not stats.game_active:
+        play_button.draw_button()
+        
     # Make the most recently drawn screen visible.
     pygame.display.flip()
 
@@ -100,7 +104,7 @@ def change_fleet_direction(ai_settings, aliens):
 
 def ship_hit(ai_settings, stats, screen, ship, aliens, bullets):
     """Respond to ship being hit by alien."""
-    if stats.ships_left > 0:
+    if stats.ship_left > 0:
         # Decrement ships left.
         stats.ship_left -= 1
 
