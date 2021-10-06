@@ -27,5 +27,5 @@ class Button():
 
     def draw_button(self):
         """Draw blank button and then draw message"""
-        self.screen.fill(self.button_color, self.rect)
+        self.screen.fill(self.button_color, self.rect) # fill() - to draw the rectangular portion.
         self.screen.blit(self.msg_image, self.msg_image_rect)
